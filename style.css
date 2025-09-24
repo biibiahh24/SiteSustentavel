@@ -1,89 +1,158 @@
-/* ======= Estilo geral ======= */
+/* ======= ESTILO GLOBAL ======= */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
-  color: #333;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f5f6f4;
+    color: #1c1c1c;
 }
 
-/* ======= Cabeçalhos ======= */
-h1, h2 {
-  text-align: center;
-  color: #27ae60;
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* ======= Formulários ======= */
-form {
-  max-width: 300px;
-  margin: 20px auto;
-  padding: 15px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+header h1 {
+    font-size: 1.2rem;
+    color: #2e7d32; /* verde sustentável */
+    font-weight: bold;
 }
 
-label {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
+header nav a {
+    margin-left: 16px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
 }
 
-input, textarea, select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+header nav a:hover {
+    color: #2e7d32;
 }
 
-/* ======= Botões ======= */
-button {
-  width: 100%;
-  padding: 10px;
-  background: #2ecc71;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+/* Container principal */
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 16px;
 }
 
-button:hover {
-  background: #27ae60;
+/* Cards de postagens */
+.post {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.05);
 }
 
-/* ======= Navegação (rodapé estilo Instagram) ======= */
-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  border-top: 1px solid #ddd;
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 12px;
 }
 
-nav a {
-  text-decoration: none;
-  font-size: 20px;
-  color: #2ecc71;
-  transition: 0.3s;
+.post-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
 }
 
-nav a:hover {
-  color: #27ae60;
+.post-header h2 {
+    font-size: 1rem;
+    margin: 0;
 }
 
-/* ======= Caixas de post/stories ======= */
-div {
-  background: white;
-  margin: 15px;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.post img {
+    width: 100%;
+    display: block;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+    font-size: 1.2rem;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #2e7d32;
+}
+
+.post-actions button:hover {
+    opacity: 0.7;
+}
+
+/* Stories */
+.stories {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.story {
+    flex: 0 0 auto;
+    text-align: center;
+    margin-right: 12px;
+}
+
+.story img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #2e7d32;
+    padding: 2px;
+}
+
+/* Botões sustentáveis */
+.btn {
+    display: inline-block;
+    background: #2e7d32;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #256628;
+}
+
+/* Rodapé fixo */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: #ffffff;
+    border-top: 1px solid #ddd;
+}
+
+footer a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.2rem;
+}
+
+footer a.active {
+    color: #2e7d32;
 }
