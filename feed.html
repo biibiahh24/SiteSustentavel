@@ -1,62 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Susty 🌱</title>
-    <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8">
+  <title>Feed - Sustagram</title>
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-    <header>
-        <h1>Sustagram 🌱</h1>
-        <nav>
-            <a href="feed.html" class="active">Feed</a>
-            <a href="explorar.html">Explorar</a>
-            <a href="notificacoes.html">Notificações</a>
-            <a href="perfil.html">Perfil</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Sustagram 🌱</h1>
+    <nav>
+      <a href="feed.html" class="active">Feed</a>
+      <a href="explorar.html">Explorar</a>
+      <a href="notificacoes.html">Notificações</a>
+      <a href="perfil.html">Perfil</a>
+    </nav>
+  </header>
 
-    <main>
-        <!-- Upload de foto -->
-        <section class="new-post">
-            <form>
-                <label for="file-upload" class="btn">📷 Escolher Foto</label>
-                <input id="file-upload" type="file" accept="image/*" style="display:none">
-                <button type="submit" class="btn">Postar</button>
-            </form>
-        </section>
+  <main>
+    <!-- Stories -->
+    <div class="stories">
+      <div class="story"><img src="img1.jpg" alt="story"><p>Maria</p></div>
+      <div class="story"><img src="img2.jpg" alt="story"><p>Lucas</p></div>
+      <div class="story"><img src="img3.jpg" alt="story"><p>Ana</p></div>
+    </div>
 
-        <!-- Stories -->
-        <section class="stories">
-            <div class="story"><img src="user1.jpg"><p>Maria</p></div>
-            <div class="story"><img src="user2.jpg"><p>Lucas</p></div>
-            <div class="story"><img src="user3.jpg"><p>Ana</p></div>
-        </section>
+    <!-- Post exemplo -->
+    <article class="post">
+      <div class="post-header">
+        <img src="perfil1.jpg" alt="foto perfil">
+        <strong>Maria Verde</strong>
+      </div>
+      <img src="post1.jpg" alt="foto postagem">
+      <div class="post-actions">
+        <button>❤️</button>
+        <button>💬</button>
+        <button>🔄</button>
+      </div>
+    </article>
+  </main>
 
-        <!-- Post exemplo -->
-        <div class="post">
-            <div class="post-header">
-                <img src="user1.jpg">
-                <h2>Maria Verde</h2>
-            </div>
-            <img src="nature.jpg" alt="Postagem">
-            <div class="post-actions">
-                <button>❤️</button>
-                <button>💬</button>
-                <button>🔗</button>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <a href="feed.html" class="active">🏠</a>
-        <a href="explorar.html">🔍</a>
-        <a href="notificacoes.html">❤️</a>
-        <a href="perfil.html">👤</a>
-    </footer>
+  <footer>
+    <a href="feed.html" class="active">🏠</a>
+    <a href="explorar.html">🔍</a>
+    <a href="postar.html">➕</a>
+    <a href="notificacoes.html">❤️</a>
+    <a href="perfil.html">👤</a>
+  </footer>
 
 </body>
 </html>
-
