@@ -1,30 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Feed - Susty</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustagram 🌱</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <h2>Feed</h2>
 
-  <div>
-    <p><strong>@rii</strong></p>
-    <img src="imagem2.jpg" alt="Postagem" width="300"><br>
-    <img src="imagemsustentavel.jpg" alt="Postagem" width="300"><br>
-    <button>Curtir</button>
-    <button>Comentar</button>
-    <button>Compartilhar</button>
-    <button>Repostar</button>
-  </div>
+    <header>
+        <h1>Sustagram 🌱</h1>
+        <nav>
+            <a href="feed.html" class="active">Feed</a>
+            <a href="explorar.html">Explorar</a>
+            <a href="notificacoes.html">Notificações</a>
+            <a href="perfil.html">Perfil</a>
+        </nav>
+    </header>
 
-  <hr>
+    <main>
+        <!-- Upload de foto -->
+        <section class="new-post">
+            <form>
+                <label for="file-upload" class="btn">📷 Escolher Foto</label>
+                <input id="file-upload" type="file" accept="image/*" style="display:none">
+                <button type="submit" class="btn">Postar</button>
+            </form>
+        </section>
 
-  <nav>
-    <a href="feed.html">🏠</a>
-    <a href="explorar.html">🔍</a>
-    <a href="postar.html">➕</a>
-    <a href="chat.html">💬</a>
-    <a href="perfil.html">👤</a>
-  </nav>
+        <!-- Stories -->
+        <section class="stories">
+            <div class="story"><img src="user1.jpg"><p>Maria</p></div>
+            <div class="story"><img src="user2.jpg"><p>Lucas</p></div>
+            <div class="story"><img src="user3.jpg"><p>Ana</p></div>
+        </section>
+
+        <!-- Post exemplo -->
+        <div class="post">
+            <div class="post-header">
+                <img src="user1.jpg">
+                <h2>Maria Verde</h2>
+            </div>
+            <img src="nature.jpg" alt="Postagem">
+            <div class="post-actions">
+                <button>❤️</button>
+                <button>💬</button>
+                <button>🔗</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="feed.html" class="active">🏠</a>
+        <a href="explorar.html">🔍</a>
+        <a href="notificacoes.html">❤️</a>
+        <a href="perfil.html">👤</a>
+    </footer>
+
 </body>
 </html>
