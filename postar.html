@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Nova Postagem - Susty</title>
+  <title>Postar - Sustagram</title>
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <h2>Criar Postagem</h2>
 
-  <form action="feed.html" method="post" enctype="multipart/form-data">
-    <label>Escolher imagem/vídeo</label><br>
-    <input type="file" name="arquivo"><br><br>
+  <header>
+    <h1>Sustagram 🌱</h1>
+    <nav>
+      <a href="feed.html">Feed</a>
+      <a href="explorar.html">Explorar</a>
+      <a href="notificacoes.html">Notificações</a>
+      <a href="perfil.html">Perfil</a>
+    </nav>
+  </header>
 
-    <label>Legenda</label><br>
-    <textarea name="legenda" rows="3"></textarea><br><br>
+  <main>
+    <form>
+      <input type="file" accept="image/*">
+      <input type="text" placeholder="Escreva uma legenda...">
+      <button type="submit" class="btn">Publicar</button>
+    </form>
+  </main>
 
-    <button type="submit">Compartilhar</button>
-  </form>
-
-  <hr>
-  <nav>
+  <footer>
     <a href="feed.html">🏠</a>
     <a href="explorar.html">🔍</a>
-    <a href="postar.html">➕</a>
-    <a href="chat.html">💬</a>
+    <a href="postar.html" class="active">➕</a>
+    <a href="notificacoes.html">❤️</a>
     <a href="perfil.html">👤</a>
-  </nav>
+  </footer>
+
 </body>
 </html>
