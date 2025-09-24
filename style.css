@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f0f2f5; /* fundo clean */
+    background-color: #f4fdf6; /* verde bem claro, sustentável */
     color: #1c1c1c;
 }
 
@@ -11,27 +11,29 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 16px;
+    padding: 14px 18px;
     background: #ffffff;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.1); /* relevo */
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
 }
 
 header h1 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: #2e7d32; /* verde sustentável */
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
 /* Navegação */
 header nav a {
-    margin-left: 16px;
+    margin-left: 18px;
     text-decoration: none;
     color: #555;
     font-weight: 500;
+    transition: color 0.2s;
 }
 
 header nav a:hover,
@@ -41,29 +43,29 @@ header nav a.active {
 
 /* Container central */
 main {
-    max-width: 600px;
-    margin: 20px auto;
+    max-width: 700px;
+    margin: 20px auto 80px auto; /* espaço extra pro rodapé */
     padding: 0 16px;
 }
 
 /* Cards de post */
 .post {
     background: #ffffff;
-    border-radius: 12px;
-    margin-bottom: 20px;
+    border-radius: 14px;
+    margin-bottom: 22px;
     overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* alto relevo */
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.06); /* sombra suave */
 }
 
 .post-header {
     display: flex;
     align-items: center;
-    padding: 12px;
+    padding: 12px 14px;
 }
 
 .post-header img {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     margin-right: 12px;
     border: 2px solid #2e7d32;
@@ -72,6 +74,13 @@ main {
 .post img {
     width: 100%;
     display: block;
+}
+
+.post .caption {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.4;
 }
 
 .post-actions {
@@ -84,39 +93,45 @@ main {
 .post-actions button {
     background: none;
     border: none;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     cursor: pointer;
     color: #2e7d32;
-    transition: transform 0.2s;
+    transition: transform 0.2s, color 0.2s;
 }
 
 .post-actions button:hover {
     transform: scale(1.2);
+    color: #256628;
 }
 
 /* Stories */
 .stories {
     display: flex;
     overflow-x: auto;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 12px;
+    margin-bottom: 22px;
     background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.06);
 }
 
 .story {
     flex: 0 0 auto;
     text-align: center;
-    margin-right: 14px;
+    margin-right: 16px;
 }
 
 .story img {
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 3px solid #2e7d32;
     padding: 2px;
+    transition: transform 0.2s;
+}
+
+.story img:hover {
+    transform: scale(1.1);
 }
 
 /* Botões */
@@ -124,8 +139,8 @@ main {
     display: inline-block;
     background: #2e7d32;
     color: white;
-    padding: 10px 18px;
-    border-radius: 10px;
+    padding: 12px 20px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 500;
     border: none;
@@ -135,6 +150,22 @@ main {
 
 .btn:hover {
     background: #256628;
+}
+
+/* Upload de fotos */
+.upload-box {
+    border: 2px dashed #2e7d32;
+    padding: 40px;
+    text-align: center;
+    color: #2e7d32;
+    border-radius: 14px;
+    margin-bottom: 22px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.upload-box:hover {
+    background: #f0f8f3;
 }
 
 /* Rodapé fixo */
@@ -147,14 +178,15 @@ footer {
     justify-content: space-around;
     padding: 12px 0;
     background: #ffffff;
-    border-top: 1px solid #ddd;
-    box-shadow: 0px -2px 4px rgba(0,0,0,0.1);
+    border-top: 1px solid #eee;
+    box-shadow: 0px -2px 6px rgba(0,0,0,0.08);
 }
 
 footer a {
     text-decoration: none;
     color: #777;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    transition: color 0.2s;
 }
 
 footer a.active {
