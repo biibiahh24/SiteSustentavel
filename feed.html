@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feed - Sustagram</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="estilo.css">
   <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -22,28 +22,29 @@
 
   <!-- Stories -->
   <section class="stories">
-    <div class="story" onclick="openStory('https://picsum.photos/80/80?random=1','Maria')">
-      <img src="https://picsum.photos/80/80?random=1" alt="Maria">
+    <div class="story" onclick="openStory('img1.jpg','Maria')">
+      <img src="img1.jpg" alt="Maria">
       <p>Maria</p>
     </div>
-    <div class="story" onclick="openStory('https://picsum.photos/80/80?random=2','Lucas')">
-      <img src="https://picsum.photos/80/80?random=2" alt="Lucas">
+    <div class="story" onclick="openStory('img2.jpg','Lucas')">
+      <img src="img2.jpg" alt="Lucas">
       <p>Lucas</p>
     </div>
-    <div class="story" onclick="openStory('https://picsum.photos/80/80?random=3','Ana')">
-      <img src="https://picsum.photos/80/80?random=3" alt="Ana">
+    <div class="story" onclick="openStory('img3.jpg','Ana')">
+      <img src="img3.jpg" alt="Ana">
       <p>Ana</p>
     </div>
   </section>
 
   <!-- Feed -->
-  <main class="feed">
+  <main>
+    <!-- Post 1 -->
     <article class="post">
       <div class="post-header">
-        <img src="https://picsum.photos/50/50?random=10" alt="Maria Verde" class="perfil">
+        <img src="perfil1.jpg" alt="Maria Verde" class="perfil">
         <strong>Maria Verde</strong>
       </div>
-      <img src="https://picsum.photos/400/300?random=11" alt="Postagem de Maria" class="post-img">
+      <img src="post1.jpg" alt="Postagem de Maria" class="post-img">
       <div class="post-actions">
         <button onclick="like(this)">❤️</button>
         <button onclick="toggleComment('c1')">💬</button>
@@ -56,12 +57,13 @@
       </div>
     </article>
 
+    <!-- Post 2 -->
     <article class="post">
       <div class="post-header">
-        <img src="https://picsum.photos/50/50?random=12" alt="Lucas Silva" class="perfil">
+        <img src="perfil2.jpg" alt="Lucas Silva" class="perfil">
         <strong>Lucas Silva</strong>
       </div>
-      <img src="https://picsum.photos/400/300?random=13" alt="Postagem de Lucas" class="post-img">
+      <img src="post2.jpg" alt="Postagem de Lucas" class="post-img">
       <div class="post-actions">
         <button onclick="like(this)">❤️</button>
         <button onclick="toggleComment('c2')">💬</button>
