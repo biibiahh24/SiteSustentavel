@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Entrar - Sustagram</title>
+  <link rel="stylesheet" href="/Styles/style.css">
+</head>
+<body class="auth-page">
+
+  <main class="auth-container">
+    <h1>Sustagram 🌱</h1>
+    <p class="subtitle">Compartilhe suas ações sustentáveis!</p>
+
+    <form action="/Pages/feed.html" method="post" class="auth-form">
+      <label for="usuario">Usuário ou e-mail</label>
+      <input type="text" id="usuario" name="usuario" placeholder="Digite seu e-mail" required>
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+      <button type="submit" class="btn">Entrar</button>
+    </form>
+
+    <div class="auth-links">
+      <a href="/Pages/recuperar.html">Esqueceu a senha?</a><br>
+      <span>Não tem conta? <a href="/Pages/criar_conta.html">Criar conta</a></span>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Explorar - Susty</title>
+  <link rel="stylesheet" href="/Styles/style.css">
+  <script src="/Scripts/js_script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Sustagram 🌱</h1>
+    <nav>
+      <a href="/Pages/feed.html">Feed</a>
+      <a href="/Pages/explorar.html" class="active">Explorar</a>
+      <a href="/Pages/desafios.html">Desafios</a>
+      <a href="/Pages/perfil.html">Perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Explorar</h2>
+    <p>Descubra novas ideias e ações sustentáveis 🌎</p>
+
+    <section class="stories">
+      <div class="story" onclick="openStory('/Images/story1.jpg', '@mariaverde')">
+        <img src="/Images/story1.jpg" alt="Story de Maria">
+        <p>@mariaverde</p>
+      </div>
+    </section>
+
+    <section class="post">
+      <div class="post-header">
+        <img src="/Images/user1.jpg" alt="Usuário 1">
+        <div>
+          <strong>@eco_gabriel</strong><br>
+          <small>2h atrás</small>
+        </div>
+      </div>
+      <img src="/Images/post1.jpg" alt="Post 1">
+      <div class="caption">Transformei garrafas em vasos reutilizáveis 💚♻️</div>
+      <div class="post-actions">
+        <button onclick="like(this)">❤️</button>
+        <span>12 curtidas</span>
+        <button onclick="toggleComment('c1')">💬</button>
+      </div>
+      <div id="c1" style="display:none; padding:10px;">
+        <input type="text" placeholder="Adicione um comentário..." style="width:100%; border-radius:8px; padding:8px; border:1px solid #ccc;" />
+        <button class="btn" style="margin-top:8px;" onclick="sendComment('c1')">Enviar</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <a href="/Pages/feed.html">🏠</a>
+    <a href="/Pages/explorar.html" class="active">🔍</a>
+    <a href="/Pages/postar.html">➕</a>
+    <a href="/Pages/desafios.html">🏆</a>
+    <a href="/Pages/perfil.html">👤</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Susty</title>
+  <link rel="stylesheet" href="/Styles/style.css">
+  <script src="/Scripts/js_script.js" defer></script>
+</head>
+<body>
+
+  <main class="login-container">
+    <h1>Bem-vindo ao Sustagram 🌱</h1>
+    <form onsubmit="return loginUser(event)">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+      <button type="submit" class="btn">Entrar</button>
+      <p>Não tem conta? <a href="/Pages/cadastro.html">Criar conta</a></p>
+    </form>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Desafios - Susty</title>
+  <link rel="stylesheet" href="/Styles/style.css">
+  <script src="/Scripts/js_script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Sustagram 🌿</h1>
+    <nav>
+      <a href="/Pages/feed.html">Feed</a>
+      <a href="/Pages/explorar.html">Explorar</a>
+      <a href="/Pages/desafios.html" class="active">Desafios</a>
+      <a href="/Pages/perfil.html">Perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Desafios Sustentáveis</h2>
+    <p>Participe de desafios ecológicos e ganhe pontos no ranking! 🌱</p>
+
+    <section class="post">
+      <div class="post-header">
+        <img src="/Images/desafio1.jpg" alt="Desafio 1">
+        <div>
+          <h3>Desafio da Reciclagem</h3>
+          <p>Recicle 5 tipos diferentes de materiais durante a semana.</p>
+        </div>
+      </div>
+      <div class="post-actions">
+        <button onclick="like(this)">❤️</button>
+        <span>0 curtidas</span>
+        <button onclick="toggleComment('coment1')">💬</button>
+      </div>
+      <div id="coment1" style="display:none; padding: 10px;">
+        <input type="text" placeholder="Comente seu progresso...">
+        <button onclick="sendComment('coment1')">Enviar</button>
+      </div>
+    </section>
+
+    <section class="post">
+      <div class="post-header">
+        <img src="/Images/desafio2.jpg" alt="Desafio 2">
+        <div>
+          <h3>Desafio sem Plástico</h3>
+          <p>Passe 3 dias sem utilizar plásticos descartáveis.</p>
+        </div>
+      </div>
+      <div class="post-actions">
+        <button onclick="like(this)">❤️</button>
+        <span>0 curtidas</span>
+        <button onclick="toggleComment('coment2')">💬</button>
+      </div>
+      <div id="coment2" style="display:none; padding: 10px;">
+        <input type="text" placeholder="Conte como foi sua experiência...">
+        <button onclick="sendComment('coment2')">Enviar</button>
+      </div>
+    </section>
+
+    <section class="post">
+      <div class="post-header">
+        <img src="/Images/desafio3.jpg" alt="Desafio 3">
+        <div>
+          <h3>Desafio da Horta Caseira</h3>
+          <p>Plante uma horta em casa e compartilhe o crescimento das plantas.</p>
+        </div>
+      </div>
+      <div class="post-actions">
+        <button onclick="like(this)">❤️</button>
+        <span>0 curtidas</span>
+        <button onclick="toggleComment('coment3')">💬</button>
+      </div>
+      <div id="coment3" style="display:none; padding: 10px;">
+        <input type="text" placeholder="Mostre o que plantou!">
+        <button onclick="sendComment('coment3')">Enviar</button>
+      </div>
+    </section>
+
+    <br>
+    <a href="/Pages/ranking.html" class="btn">Ver Ranking de Desafios</a>
+  </main>
+
+  <footer>
+    <a href="/Pages/feed.html">🏠</a>
+    <a href="/Pages/explorar.html">🔍</a>
+    <a href="/Pages/postar.html">➕</a>
+    <a href="/Pages/desafios.html" class="active">🏆</a>
+    <a href="/Pages/perfil.html">👤</a>
+  </footer>
+
+</body>
+</html>

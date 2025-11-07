@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Postar - Susty</title>
+  <link rel="stylesheet" href="/Styles/style.css">
+  <script src="/Scripts/js_script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Novo Post 🌱</h1>
+  </header>
+
+  <main class="postar-container">
+    <form id="formPost" onsubmit="return publicarPost(event)">
+      <label for="foto">Escolher imagem</label><br>
+      <input type="file" id="foto" accept="image/*" required><br><br>
+
+      <label for="descricao">Descrição</label><br>
+      <textarea id="descricao" rows="4" placeholder="Fale sobre sua ação sustentável..." required></textarea><br><br>
+
+      <button type="submit" class="btn">Publicar 🌎</button>
+    </form>
+  </main>
+
+  <footer>
+    <a href="/Pages/feed.html">🏠</a>
+    <a href="/Pages/explorar.html">🔍</a>
+    <a href="/Pages/postar.html" class="active">➕</a>
+    <a href="/Pages/desafios.html">🏆</a>
+    <a href="/Pages/perfil.html">👤</a>
+  </footer>
+
+  <script>
+    function publicarPost(event) {
+      event.preventDefault();
+      const foto = document.getElementById('foto').files[0];
+      const descricao = document.getElementById('descricao').value.trim();
+      if (!foto || !descricao) {
+        alert("Por favor, adicione uma imagem e uma descrição.");
+        return false;
+      }
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const novoPost = {
+          imagem: e.target.result,
+          descricao: descricao,
+          data: new Date().toLocaleString()
+        };
+        let posts = JSON.parse(localStorage.getItem('posts')) || [];
+        posts.unshift(novoPost);
+        localStorage.setItem('posts', JSON.stringify(posts));
+        alert("Post publicado com sucesso!");
+        window.location.href = "/Pages/feed.html";
+      };
+      reader.readAsDataURL(foto);
+      return false;
+    }
+  </script>
+
+</body>
+</html>

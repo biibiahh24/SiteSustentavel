@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Segurança - Susty</title>
+  <link rel="stylesheet" href="/Styles/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Sustagram 🌿</h1>
+    <nav>
+      <a href="/Pages/feed.html">Feed</a>
+      <a href="/Pages/explorar.html">Explorar</a>
+      <a href="/Pages/notificacoes.html">Notificações</a>
+      <a href="/Pages/perfil.html" class="active">Perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Configurações de Segurança</h2>
+
+    <section class="post">
+      <form action="/Pages/configuracao.html" method="post" class="caption">
+        <label for="senha-atual">Senha atual</label><br>
+        <input type="password" id="senha-atual" name="senha-atual" placeholder="Digite sua senha atual"><br><br>
+
+        <label for="nova-senha">Nova senha</label><br>
+        <input type="password" id="nova-senha" name="nova-senha" placeholder="Crie uma nova senha"><br><br>
+
+        <label for="confirmar-senha">Confirmar nova senha</label><br>
+        <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Repita a nova senha"><br><br>
+
+        <label>
+          <input type="checkbox" name="autenticacao" id="autenticacao">
+          Ativar autenticação em dois fatores
+        </label><br><br>
+
+        <label for="perg-seguranca">Pergunta de segurança</label><br>
+        <select id="perg-seguranca" name="perg-seguranca">
+          <option value="">Selecione uma pergunta</option>
+          <option value="pet">Qual é o nome do seu primeiro animal de estimação?</option>
+          <option value="mae">Qual é o nome de solteira da sua mãe?</option>
+          <option value="cidade">Em que cidade você nasceu?</option>
+        </select><br><br>
+
+        <input type="text" id="resp-seguranca" name="resp-seguranca" placeholder="Resposta da pergunta"><br><br>
+
+        <button type="submit" class="btn">Salvar configurações</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/Pages/feed.html">🏠</a>
+    <a href="/Pages/explorar.html">🔍</a>
+    <a href="/Pages/postar.html">➕</a>
+    <a href="/Pages/notificacoes.html">❤️</a>
+    <a href="/Pages/perfil.html">👤</a>
+  </footer>
+
+</body>
+</html>
