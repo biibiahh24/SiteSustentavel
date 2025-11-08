@@ -1,0 +1,621 @@
+/*Log-in*/
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fundo */
+body {
+  background: linear-gradient(135deg, #3edf81, #9bf0a9);
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* empilha logo e form */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo */
+.logo-top {
+  text-align: center;
+  margin-bottom: 10px; /* aproxima mais do login */
+}
+
+.logo-small {
+  width: 180px; 
+  height: auto;
+}
+
+/* Formulário */
+form {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: left;
+  margin-top: -10px; /* traz o form um pouco pra cima */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0 14px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border: 1px solid #14b35b;
+}
+
+button {
+  width: 100%;
+  background-color: #14b35b;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #11a252;
+}
+
+p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+a {
+  color: #14b35b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --Perfil-- */
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* === Fundo geral === */
+body {
+  background: linear-gradient(135deg, #3edf81, #9bf0a9);
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+/* === Cabeçalho === */
+header {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid #14b35b;
+}
+
+/* Logo + título */
+header h1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #14b35b;
+  font-size: 1.6em;
+}
+
+header h1 img {
+  width:150px; /* aumentada em 40% */
+  height: auto;
+  vertical-align: middle;
+}
+
+/* === Navegação === */
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  margin-left: 15px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #14b35b;
+  color: white;
+}
+
+nav a.active {
+  background-color: #14b35b;
+  color: white;
+}
+
+/* === Área principal === */
+main {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* === Seção do perfil === */
+section.post {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Foto de perfil */
+section.post img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #14b35b;
+  object-fit: cover;
+  margin-bottom: 10px;
+  content: url('perfil.png'); 
+  box-shadow: 0 0 10px rgba(20, 179, 91, 0.4);
+}
+
+/* Nome e seguidores */
+section.post strong {
+  font-size: 1.2em;
+  color: #111;
+}
+
+section.post small {
+  display: block;
+  color: #555;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+/* Bio */
+.caption {
+  background: #f5fff8;
+  border: 1px solid #c3f2d0;
+  border-radius: 8px;
+  padding: 10px;
+  color: #333;
+  font-size: 0.95em;
+}
+
+/* === Rodapé === */
+footer {
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid #14b35b;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+footer a {
+  font-size: 1.6em;
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+footer a:hover {
+  transform: scale(1.2);
+  color: #14b35b;
+}
+
+footer a.active {
+  color: white;
+  background-color: #14b35b;
+  border-radius: 50%;
+  padding: 6px 10px;
+}
+
+/* === Responsividade === */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.3em;
+  }
+
+  header h1 img {
+    width: 0px; 
+  }
+
+  nav a {
+    font-size: 0.9em;
+    margin-left: 8px;
+  }
+
+  section.post {
+    width: 90%;
+    padding: 20px;
+  }
+
+  footer a {
+    font-size: 1.4em;
+  }
+}
+
+/* === Logo na tela de cadastro === */
+.logo-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.logo-container .logo {
+  width: 190px; 
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* === Área principal do cadastro === */
+body {
+  background: linear-gradient(135deg, #3edf81, #9bf0a9);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #222;
+}
+
+/* === Título === */
+h1 {
+  color: #000000;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center; 
+  width: 100%;
+}
+
+/* === Formulário === */
+form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 380px;
+}
+
+form label {
+  font-weight: bold;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* === Botão === */
+button {
+  width: 100%;
+  background-color: #14b35b;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0f924b;
+}
+
+/* === Link de login === */
+p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+a {
+  color: #14b35b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*Notificacoes*/
+/* === NOTIFICAÇÕES (EcoGram) === */
+body.notificacoes {
+  background: linear-gradient(135deg, #3edf81, #9bf0a9);
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+/* Cabeçalho */
+body.notificacoes header {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid #14b35b;
+}
+
+/* Logo */
+body.notificacoes header h1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #14b35b;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+body.notificacoes header h1::before {
+  content: url('EcoGram.png');
+  width: 50px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Navegação */
+body.notificacoes nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  margin-left: 15px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.notificacoes nav a:hover {
+  background-color: #14b35b;
+  color: white;
+}
+
+body.notificacoes nav a.active {
+  background-color: #14b35b;
+  color: white;
+}
+
+/* Conteúdo principal */
+body.notificacoes main {
+  flex: 1;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 20px 80px;
+}
+
+body.notificacoes main h2 {
+  text-align: center;
+  color: #0f924b;
+  font-size: 1.8em;
+  margin-bottom: 25px;
+}
+
+/* Cards de notificação */
+body.notificacoes .post {
+  background: white;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  font-size: 1em;
+  color: #222;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+body.notificacoes .post:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+body.notificacoes .post::before {
+  content: "🌿 ";
+  font-size: 1.2em;
+}
+
+/* Rodapé */
+body.notificacoes footer {
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid #14b35b;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+body.notificacoes footer a {
+  font-size: 1.6em;
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+body.notificacoes footer a:hover {
+  transform: scale(1.2);
+  color: #14b35b;
+}
+
+body.notificacoes footer a.active {
+  color: white;
+  background-color: #14b35b;
+  border-radius: 50%;
+  padding: 6px 10px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  body.notificacoes header h1 {
+    font-size: 1.4em;
+  }
+
+  body.notificacoes header h1::before {
+    width: 36px;
+  }
+
+  body.notificacoes nav a {
+    font-size: 0.9em;
+    margin-left: 8px;
+  }
+
+  body.notificacoes main h2 {
+    font-size: 1.5em;
+  }
+
+  body.notificacoes .post {
+    font-size: 0.95em;
+    padding: 12px;
+  }
+
+  body.notificacoes footer a {
+    font-size: 1.4em;
+  }
+}
+
+/* --- Estilo da seção de notificações --- */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 90px; /* espaço pra não colar no rodapé */
+}
+
+main h2 {
+  color: #0f924b;
+  margin-bottom: 20px;
+}
+
+/* Cada notificação */
+.post {
+  width: 90%;
+  background: white;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 15px; /* espaçamento entre as notificações */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-size: 1em;
+  color: #222;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito hover */
+.post:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .post {
+    width: 95%;
+    padding: 12px;
+    font-size: 0.9em;
+  }
+}
+/* Cabeçalho */
+header {
+  background-color: #e8fff0;
+  display: flex;
+  justify-content: space-between; /* nome à esquerda, menu à direita */
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 2px solid #cceccc;
+}
+
+header h1 {
+  color: #0f924b;
+  font-size: 1.8em;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  gap: 20px; /* espaço entre os links */
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+header nav a:hover {
+  color: #0f924b;
+}
+
+header nav a.active {
+  background: #0f924b;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+/* Título "Notificações" */
+main h2 {
+  color: black; /* muda para preto */
+  margin-bottom: 20px;
+  font-weight: 700;
+}

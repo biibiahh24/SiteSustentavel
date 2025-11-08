@@ -1,36 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Explorar - Sustagram</title>
-  <link rel="stylesheet" href="estilo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorar - Susty</title>
+  <link rel="stylesheet" href="config.css">
+  <script src="/Scripts/js_script.js" defer></script>
 </head>
 <body>
 
   <header>
-    <h1>Sustagram 🌱</h1>
-    <nav>
-      <a href="feed.html">Feed</a>
-      <a href="explorar.html" class="active">Explorar</a>
-      <a href="notificacoes.html">Notificações</a>
-      <a href="perfil.html">Perfil</a>
-      <a href="configuracao.html">⚙️</a>
-    </nav>
+    <h1>Explorar 🔍</h1>
   </header>
 
-  <main>
-    <h2>Explorar</h2>
-    <div class="post"><img src="imagem1.jpg" alt="post"></div>
-    <div class="post"><img src="imagem2.jpg" alt="post"></div>
-    <div class="post"><img src="imagem3.jpg" alt="post"></div>
+  <main class="explorar-container">
+
+    <section class="pesquisa-box">
+      <input type="text" id="barraPesquisa" placeholder="Pesquisar perfis, postagens, áudios..." oninput="pesquisarExplorar()">
+    </section>
+
+    <section class="filtros-explorar">
+      <button class="filtro ativo" onclick="filtrarExplorar('tudo')">Tudo</button>
+      <button class="filtro" onclick="filtrarExplorar('perfis')">Perfis</button>
+      <button class="filtro" onclick="filtrarExplorar('postagens')">Postagens</button>
+      <button class="filtro" onclick="filtrarExplorar('audios')">Áudios</button>
+    </section>
+
+    <section id="explorarContainer" class="resultados-explorar">
+      <!-- O JS insere os resultados aqui -->
+    </section>
+
   </main>
 
   <footer>
-    <a href="feed.html">🏠</a>
-    <a href="explorar.html" class="active">🔍</a>
-    <a href="postar.html">➕</a>
-    <a href="notificacoes.html">❤️</a>
-    <a href="perfil.html">👤</a>
+    <a href="/Pages/feed.html">🏠</a>
+    <a href="/Pages/explorar.html" class="active">🔍</a>
+    <a href="/Pages/postar.html">➕</a>
+    <a href="/Pages/notificacoes.html">❤️</a>
+    <a href="/Pages/perfil.html">👤</a>
   </footer>
 
 </body>

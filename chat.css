@@ -1,0 +1,365 @@
+/* ======== GERAL ======== */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, #a8f0c3 0%, #69d89b 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ======== CABEÇALHO ======== */
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #e8fff0;
+  padding: 15px;
+  margin: 0;
+  border-bottom: 2px solid #cceccc;
+  color: #0f924b;
+  font-weight: 700;
+}
+
+h2::before {
+  content: "";
+  background: url("EcoGram.png") no-repeat center;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+}
+
+/* ======== ÁREA DE MENSAGENS ======== */
+div {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Cada linha de mensagem (usa flex para alinhar avatar + texto) */
+p {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+/* ======== FOTO DE PERFIL ======== */
+p::before {
+  content: "";
+  background: url("perfil.png") no-repeat center;
+  background-size: cover;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ======== MENSAGENS DO USUÁRIO ======== */
+p:has(strong:contains("Você")) {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+p:has(strong:contains("Você"))::before {
+  margin-left: 8px;
+}
+
+p:has(strong:contains("Você")) {
+  background-color: #b8f5ce;
+  border-radius: 15px 15px 0 15px;
+  padding: 10px 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ======== MENSAGENS RECEBIDAS ======== */
+p:has(strong:contains("@")) {
+  align-self: flex-start;
+}
+
+p:has(strong:contains("@")) {
+  background-color: #fff;
+  border-radius: 15px 15px 15px 0;
+  padding: 10px 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ======== FORMULÁRIO (RODAPÉ) ======== */
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e8fff0;
+  padding: 10px;
+  border-top: 2px solid #cceccc;
+  position: sticky;
+  bottom: 0;
+}
+
+input[type="text"] {
+  flex: 1;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-size: 1em;
+  outline: none;
+  background: white;
+}
+
+button {
+  background-color: #0f924b;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #0c7d3e;
+}
+
+/* ======== LINK VOLTAR ======== */
+a {
+  text-decoration: none;
+  color: #0f924b;
+  text-align: center;
+  display: block;
+  padding: 10px;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* ======== GERAL ======== */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, #a8f0c3 0%, #69d89b 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ======== CABEÇALHO ======== */
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #e8fff0;
+  padding: 18px;
+  margin: 0;
+  border-bottom: 2px solid #cceccc;
+  color: #0f924b;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-size: 1.6em;
+}
+
+h2::before {
+  content: "";
+  background: url("EcoGram.png") no-repeat center;
+  background-size: contain;
+  width: 55px; /* aumentei o tamanho da logo */
+  height: 55px;
+  display: inline-block;
+}
+
+/* ======== LISTA DE CHATS (chat.html) ======== */
+body:has(a[href="chat_abrir.html"]) div {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+body:has(a[href="chat_abrir.html"]) div p {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body:has(a[href="chat_abrir.html"]) div p:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+body:has(a[href="chat_abrir.html"]) div p::before {
+  content: "";
+  background: url("perfil.png") no-repeat center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+body:has(a[href="chat_abrir.html"]) div p a {
+  text-decoration: none;
+  color: #0f924b;
+  font-weight: 600;
+  margin-right: 6px;
+  transition: color 0.2s ease;
+}
+
+body:has(a[href="chat_abrir.html"]) div p a:hover {
+  color: #0c7d3e;
+}
+
+/* ======== CHAT INDIVIDUAL (chat_abrir.html) ======== */
+body:not(:has(a[href="chat_abrir.html"])) div {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Linha de mensagem (com avatar + texto) */
+body:not(:has(a[href="chat_abrir.html"])) p {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+  margin: 0;
+  position: relative;
+}
+
+/* Foto de perfil */
+body:not(:has(a[href="chat_abrir.html"])) p::before {
+  content: "";
+  background: url("perfil.png") no-repeat center;
+  background-size: cover;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Ícone de câmera no final de cada mensagem */
+body:not(:has(a[href="chat_abrir.html"])) p::after {
+  content: " 📸";
+  font-size: 1.2em;
+  margin-left: 6px;
+}
+
+/* Mensagens enviadas */
+body:not(:has(a[href="chat_abrir.html"])) p:has(strong:contains("Você")) {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+body:not(:has(a[href="chat_abrir.html"])) p:has(strong:contains("Você"))::before {
+  margin-left: 8px;
+}
+
+body:not(:has(a[href="chat_abrir.html"])) p:has(strong:contains("Você")) {
+  background-color: #b8f5ce;
+  border-radius: 15px 15px 0 15px;
+  padding: 10px 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Mensagens recebidas */
+body:not(:has(a[href="chat_abrir.html"])) p:has(strong:contains("@")) {
+  align-self: flex-start;
+  background-color: #fff;
+  border-radius: 15px 15px 15px 0;
+  padding: 10px 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ======== FORMULÁRIO (RODAPÉ DO CHAT) ======== */
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e8fff0;
+  padding: 10px;
+  border-top: 2px solid #cceccc;
+  position: sticky;
+  bottom: 0;
+}
+
+input[type="text"] {
+  flex: 1;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-size: 1em;
+  outline: none;
+  background: white;
+}
+
+button {
+  background-color: #0f924b;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #0c7d3e;
+}
+
+/* ======== MENU INFERIOR ======== */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e8fff0;
+  border-top: 2px solid #cceccc;
+  padding: 10px 0;
+  position: sticky;
+  bottom: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #0f924b;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  color: #0c7d3e;
+  transform: scale(1.1);
+}
+
+/* ======== SCROLLBAR ======== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0f924b;
+  border-radius: 4px;
+}

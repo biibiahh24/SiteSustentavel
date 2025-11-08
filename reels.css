@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+/* HEADER */
+header {
+  background: #0f924b;
+  padding: 10px 0;
+  border-bottom: 1px solid #0f924b;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  margin: 0 8px;
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+nav a.active,
+nav a:hover {
+  color: #5cff80;
+}
+
+/* ===== REELS ===== */
+.reel-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+video {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 380px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #060606;
+}
+
+/* ===== BOTÕES SOBRE O VÍDEO ===== */
+.reel-buttons {
+  position: absolute;
+  right: 12px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.reel-buttons button,
+.reel-buttons span {
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+}
+
+/* LIKE ANIMATION */
+.like-btn.liked {
+  color: #ff4e85;
+  animation: pop 0.35s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.6); }
+  100% { transform: scale(1); }
+}
+
+/* COMENTÁRIOS */
+.comments input {
+  margin-top: 10px;
+  padding: 8px;
+  width: 60%;
+  border-radius: 6px;
+  border: none;
+}
+
+.comments button {
+  background: #5cff80;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #070707;
+  padding: 10px 0;
+  border-top: 1px solid #333;
+}
+
+footer a {
+  margin: 0 18px;
+  font-size: 23px;
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+footer a.active,
+footer a:hover {
+  color: #5cff80;
+}

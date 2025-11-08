@@ -1,0 +1,96 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f924b;;
+  padding-bottom: 80px;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: #fff;
+  font-size: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.seta, .check {
+  cursor: pointer;
+}
+
+/* CARDS */
+main {
+  padding: 15px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background: #f4f4f4;
+  border-radius: 18px;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #e1e1e1;
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.info {
+  margin-left: 14px;
+  flex: 1;
+}
+
+.info h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+button {
+  background: #c9ffd6;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.icons {
+  display: flex;
+  gap: 18px;
+  font-size: 18px;
+}
+
+/* MENU INFERIOR */
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  border-top: 1px solid #ddd;
+}
+
+.bottom-menu a {
+  font-size: 24px;
+  color: #777;
+  text-decoration: none;
+}
+
+.bottom-menu .active {
+  color: #3edf81;
+}

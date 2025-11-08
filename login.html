@@ -2,20 +2,29 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Login - Sustagram</title>
-  <link rel="stylesheet" href="estilo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - EcoGram</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-  <main>
-    <form>
-      <h2>Entrar</h2>
-      <input type="text" placeholder="Usuário">
-      <input type="password" placeholder="Senha">
-      <button type="submit" class="btn">Entrar</button>
-      <p>Não tem conta? <a href="criar_conta.html">Criar conta</a></p>
-    </form>
-  </main>
+  <div class="logo-top">
+    <img src="EcoGram.png" alt="Logo Sustagram" class="logo-small">
+  </div>
+
+  <form>
+    <h1>Login</h1>
+
+    <label for="user">Usuário</label>
+    <input type="text" id="user" name="user" required>
+
+    <label for="password">Senha</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Entrar</button>
+
+    <p>Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+  </form>
 
 </body>
 </html>

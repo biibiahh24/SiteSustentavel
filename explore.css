@@ -1,0 +1,134 @@
+/* ==== ESTILO GERAL ==== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #a8e6a3;
+  color: #333;
+}
+
+/* ==== CABEÇALHO ==== */
+header {
+  text-align: center;
+  background-color: #d9fdd3;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  color: #1b5e20;
+  font-size: 1.8rem;
+}
+
+/* ==== BARRA DE PESQUISA ==== */
+.pesquisa-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.pesquisa-box input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1.5px solid #aaa;
+  border-radius: 20px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.pesquisa-box input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 5px rgba(46, 125, 50, 0.4);
+}
+
+/* ==== FILTROS ==== */
+.filtros-explorar {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.filtro {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.filtro:hover {
+  background: #e8f5e9;
+}
+
+.filtro.ativo {
+  background: #2e7d32;
+  color: white;
+}
+
+/* ==== GALERIA DE IMAGENS ==== */
+.resultados-explorar.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 3px;
+  padding: 10px;
+  background-color: #a8e6a3;
+}
+
+.photo {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* Mantém formato quadrado */
+  background-image: url("imagensustentavel.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+/* ==== RODAPÉ ==== */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #d9fdd3;
+  padding: 8px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+footer a.active {
+  color: #2e7d32;
+}
+
+footer a:hover {
+  color: #1b5e20;
+}
+
+/* ==== RESPONSIVIDADE ==== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+  .pesquisa-box input {
+    width: 90%;
+  }
+}
